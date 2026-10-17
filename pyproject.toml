@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "primetone-stems"
+version = "0.3.0"
+description = "Local-first AI music stem separation desktop app"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "PySide6>=6.7,<7", "demucs>=4.0.1",
+  "torch>=2.1,<2.9", "torchaudio>=2.1,<2.9",
+  "numpy", "soundfile>=0.12", "sounddevice>=0.4.6",
+]
+
+[project.scripts]
+primetone-stems = "primetone_stems.app:main"
+
+[tool.setuptools.packages.find]
+include = ["primetone_stems*"]

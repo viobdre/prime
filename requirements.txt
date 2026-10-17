@@ -1,0 +1,8 @@
+PySide6>=6.7,<7
+demucs>=4.0.1
+# demucs 4.0.1 predates torchaudio's I/O rewrite; keep torch/torchaudio in a range you have tested
+torch>=2.1,<2.9
+torchaudio>=2.1,<2.9
+numpy
+soundfile>=0.12
+sounddevice>=0.4.6
